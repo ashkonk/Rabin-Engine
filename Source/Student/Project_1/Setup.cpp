@@ -6,6 +6,7 @@ void ProjectOne::setup()
 {
     // Create your inital agents
     agents->create_behavior_agent("ExampleAgent", BehaviorTreeTypes::Example);
+    agents->create_behavior_agent("Orphan", BehaviorTreeTypes::Orphan);
 
     // you can technically load any map you want, even create your own map file,
     // but behavior agents won't actually avoid walls or anything special, unless you code that yourself
@@ -23,9 +24,9 @@ void ProjectOne::setup()
     camera->set_pitch(0.610865); // 35 degrees
 
     audioManager->SetVolume(0.5f);
-    audioManager->PlaySoundEffect(L"Assets\\Audio\\retro.wav");
+    //audioManager->PlaySoundEffect(L"Assets\\Audio\\retro.wav");
     // uncomment for example on playing music in the engine (must be .wav)
-    // audioManager->PlayMusic(L"Assets\\Audio\\motivate.wav");
+     audioManager->PlayMusic(L"Assets\\Audio\\motivate.wav");
     // audioManager->PauseMusic(...);
     // audioManager->ResumeMusic(...);
     // audioManager->StopMusic(...);
